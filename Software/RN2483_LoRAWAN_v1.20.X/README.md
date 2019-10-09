@@ -8,15 +8,15 @@ Added BME280 sensor support. Generated a build in exmaple for [Weather click](ht
 
 Tips and tricks: Disable BME280 I2C interrupt. 
 
-p align="center">
-  <img width="800" height="722" src="https://github.com/kamval/RN2483/blob/master/Documents/RN2483_LoRAWAN_v1.20.X.Tips.png">
+<p align="center">
+  <img width="500" height="451" src="https://github.com/kamval/RN2483/blob/master/Documents/RN2483_LoRAWAN_v1.20.X.Tips.png">
 </p>
 
 Added a very simple code, to support the listed peripherals above and manage the payload data format. 
 The data is send to [The Things Network](https://www.thethingsnetwork.org/) every ~5 min::
 
  <p align="center">
-  <img width="1000" height="404" src="https://github.com/kamval/RN2483/blob/master/Documents/">
+  <img width="1000" height="404" src="https://github.com/kamval/RN2483/blob/master/Documents/TTN_RN2483_LoRAWAN_v1.20.X.png">
 </p>
 
 A TTN Decoder is used parse the data received by the node:
