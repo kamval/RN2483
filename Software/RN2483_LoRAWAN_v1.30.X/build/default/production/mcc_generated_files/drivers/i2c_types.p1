@@ -1,0 +1,157 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"26 mcc_generated_files/drivers/i2c_types.c
+[c E96 1 2 3 4 5 .. ]
+[n E96 . i2c_stop i2c_restart_read i2c_restart_write i2c_continue i2c_reset_link  ]
+[; ;stdint.h: 13: typedef signed char int8_t;
+[; ;stdint.h: 20: typedef signed int int16_t;
+[; ;stdint.h: 28: typedef signed short long int int24_t;
+[; ;stdint.h: 36: typedef signed long int int32_t;
+[; ;stdint.h: 43: typedef unsigned char uint8_t;
+[; ;stdint.h: 49: typedef unsigned int uint16_t;
+[; ;stdint.h: 56: typedef unsigned short long int uint24_t;
+[; ;stdint.h: 63: typedef unsigned long int uint32_t;
+[; ;stdint.h: 71: typedef signed char int_least8_t;
+[; ;stdint.h: 78: typedef signed int int_least16_t;
+[; ;stdint.h: 90: typedef signed short long int int_least24_t;
+[; ;stdint.h: 98: typedef signed long int int_least32_t;
+[; ;stdint.h: 105: typedef unsigned char uint_least8_t;
+[; ;stdint.h: 111: typedef unsigned int uint_least16_t;
+[; ;stdint.h: 121: typedef unsigned short long int uint_least24_t;
+[; ;stdint.h: 128: typedef unsigned long int uint_least32_t;
+[; ;stdint.h: 137: typedef signed char int_fast8_t;
+[; ;stdint.h: 144: typedef signed int int_fast16_t;
+[; ;stdint.h: 156: typedef signed short long int int_fast24_t;
+[; ;stdint.h: 164: typedef signed long int int_fast32_t;
+[; ;stdint.h: 171: typedef unsigned char uint_fast8_t;
+[; ;stdint.h: 177: typedef unsigned int uint_fast16_t;
+[; ;stdint.h: 187: typedef unsigned short long int uint_fast24_t;
+[; ;stdint.h: 194: typedef unsigned long int uint_fast32_t;
+[; ;stdint.h: 200: typedef int32_t intmax_t;
+[; ;stdint.h: 205: typedef uint32_t uintmax_t;
+[; ;stdint.h: 210: typedef int16_t intptr_t;
+[; ;stdint.h: 215: typedef uint16_t uintptr_t;
+[; ;__size_t.h: 4: typedef unsigned size_t;
+[; ;stdarg.h: 7: typedef void * va_list[1];
+[; ;stdarg.h: 10: extern void * __va_start(void);
+[; ;stdarg.h: 13: extern void * __va_arg(void *, ...);
+[; ;stdio.h: 43: struct __prbuf
+[; ;stdio.h: 44: {
+[; ;stdio.h: 45: char * ptr;
+[; ;stdio.h: 46: void (* func)(char);
+[; ;stdio.h: 47: };
+[; ;errno.h: 29: extern int errno;
+[; ;conio.h: 12: extern void init_uart(void);
+[; ;conio.h: 14: extern char getch(void);
+[; ;conio.h: 15: extern char getche(void);
+[; ;conio.h: 16: extern void putch(char);
+[; ;conio.h: 17: extern void ungetch(char);
+[; ;conio.h: 19: extern __bit kbhit(void);
+[; ;conio.h: 23: extern char * cgets(char *);
+[; ;conio.h: 24: extern void cputs(const char *);
+[; ;stdio.h: 88: extern int cprintf(char *, ...);
+[; ;stdio.h: 93: extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+[; ;stdio.h: 183: extern char * gets(char *);
+[; ;stdio.h: 184: extern int puts(const char *);
+[; ;stdio.h: 185: extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+[; ;stdio.h: 186: extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+[; ;stdio.h: 187: extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+[; ;stdio.h: 188: extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+[; ;stdio.h: 189: extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+[; ;stdio.h: 190: extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+[; ;stdio.h: 194: extern int sprintf(char *, const char *, ...);
+[; ;stdio.h: 195: extern int printf(const char *, ...);
+[; ;i2c_types.h: 29: typedef enum {
+[; ;i2c_types.h: 30: I2C_NOERR,
+[; ;i2c_types.h: 31: I2C_BUSY,
+[; ;i2c_types.h: 32: I2C_FAIL
+[; ;i2c_types.h: 35: } i2c_error_t;
+[; ;i2c_types.h: 37: typedef enum
+[; ;i2c_types.h: 38: {
+[; ;i2c_types.h: 39: i2c_stop=1,
+[; ;i2c_types.h: 40: i2c_restart_read,
+[; ;i2c_types.h: 41: i2c_restart_write,
+[; ;i2c_types.h: 42: i2c_continue,
+[; ;i2c_types.h: 43: i2c_reset_link
+[; ;i2c_types.h: 44: } i2c_operations_t;
+[; ;i2c_types.h: 46: typedef i2c_operations_t (*i2c_callback)(void *p);
+[; ;i2c_types.h: 48: typedef uint8_t i2c_address_t;
+[; ;i2c_types.h: 51: i2c_operations_t i2c_returnStop(void *p);
+[; ;i2c_types.h: 52: i2c_operations_t i2c_returnReset(void *p);
+[; ;i2c_types.h: 53: i2c_operations_t i2c_restartWrite(void *p);
+[; ;i2c_types.h: 54: i2c_operations_t i2c_restartRead(void *p);
+"25 mcc_generated_files/drivers/i2c_types.c
+[v _i2c_returnStop `(E96 ~T0 @X0 1 ef1`*v ]
+"26
+{
+[; ;i2c_types.c: 25: i2c_operations_t i2c_returnStop(void *p)
+[; ;i2c_types.c: 26: {
+[e :U _i2c_returnStop ]
+"25
+[v _p `*v ~T0 @X0 1 r1 ]
+"26
+[f ]
+[; ;i2c_types.c: 27: return i2c_stop;
+"27
+[e ) . `E96 0 ]
+[e $UE 2  ]
+[; ;i2c_types.c: 28: }
+"28
+[e :UE 2 ]
+}
+"30
+[v _i2c_returnReset `(E96 ~T0 @X0 1 ef1`*v ]
+"31
+{
+[; ;i2c_types.c: 30: i2c_operations_t i2c_returnReset(void *p)
+[; ;i2c_types.c: 31: {
+[e :U _i2c_returnReset ]
+"30
+[v _p `*v ~T0 @X0 1 r1 ]
+"31
+[f ]
+[; ;i2c_types.c: 32: return i2c_reset_link;
+"32
+[e ) . `E96 4 ]
+[e $UE 3  ]
+[; ;i2c_types.c: 33: }
+"33
+[e :UE 3 ]
+}
+"35
+[v _i2c_restartWrite `(E96 ~T0 @X0 1 ef1`*v ]
+"36
+{
+[; ;i2c_types.c: 35: i2c_operations_t i2c_restartWrite(void *p)
+[; ;i2c_types.c: 36: {
+[e :U _i2c_restartWrite ]
+"35
+[v _p `*v ~T0 @X0 1 r1 ]
+"36
+[f ]
+[; ;i2c_types.c: 37: return i2c_restart_write;
+"37
+[e ) . `E96 2 ]
+[e $UE 4  ]
+[; ;i2c_types.c: 38: }
+"38
+[e :UE 4 ]
+}
+"40
+[v _i2c_restartRead `(E96 ~T0 @X0 1 ef1`*v ]
+"41
+{
+[; ;i2c_types.c: 40: i2c_operations_t i2c_restartRead(void *p)
+[; ;i2c_types.c: 41: {
+[e :U _i2c_restartRead ]
+"40
+[v _p `*v ~T0 @X0 1 r1 ]
+"41
+[f ]
+[; ;i2c_types.c: 42: return i2c_restart_read;
+"42
+[e ) . `E96 1 ]
+[e $UE 5  ]
+[; ;i2c_types.c: 43: }
+"43
+[e :UE 5 ]
+}
