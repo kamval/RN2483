@@ -15,5 +15,5 @@ The [RN2483A](https://www.microchip.com/wwwproducts/en/RN2483) is a fully-certif
 The module's embedded LoRaWAN™ Class A protocol enables seamless connectivity to any LoRaWAN compliant network infrastructure, whether public or privately deployed. The module is specifically designed for ease of use, which shortens development time and speeds time to market. LoRa technology is ideal for battery-operated sensors and low power applications such as IoT, M2M, Smart City, Sensor networks, Industrial automation, and more. 
 
 <p align="center">
-  <img width="312" height="208" src="https://github.com/kamval/RN2483/blob/master/Documents/a5d27_som1_ek_board.png">
+  <img width="312" height="208" src="https://github.com/kamval/RN2483/blob/master/Documents/medium-RN2483-MODULE-47.png">
 </p>
